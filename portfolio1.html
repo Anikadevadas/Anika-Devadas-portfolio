@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anika Devadas | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0f172a;
+            --card-bg: #1e293b;
+            --accent: #38bdf8;
+            --text-light: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+
+        * { box-sizing: border-box; scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(circle at top right, #1e293b, #0f172a);
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            margin: 0;
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin: 1rem 0 2rem;
+            max-width: 600px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+        }
+
+        section { margin-bottom: 5rem; }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--accent);
+            padding-left: 15px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-tag {
+            background: var(--card-bg);
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid #334155;
+            transition: 0.3s;
+        }
+
+        .skill-tag:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+        }
+
+        .education-card {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid #334155;
+            position: relative;
+        }
+
+        .college-name { color: var(--accent); margin: 0; font-size: 1.4rem; }
+
+        /* Connect Section Styling */
+        .connect-container {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid #334155;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .contact-item {
+            text-decoration: none;
+            color: var(--text-light);
+            background: #0f172a;
+            padding: 12px 25px;
+            border-radius: 10px;
+            border: 1px solid var(--accent);
+            transition: 0.3s;
+            font-weight: 600;
+        }
+
+        .contact-item:hover {
+            background: var(--accent);
+            color: var(--bg-dark);
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            border-top: 1px solid #334155;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Anika Devadas</h1>
+        <p class="subtitle">Computer Science Engineering Student | Merging logic with creative code solutions.</p>
+        <div class="contact-links">
+            <a href="#connect" class="contact-item">Get In Touch</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p style="font-size: 1.1rem; color: var(--text-muted);">
+                I am a dedicated Computer Science student with a strong foundation in programming and problem-solving. My approach to technology is both <strong>logical</strong>—ensuring efficiency and performance—and <strong>creative</strong>—designing intuitive user experiences.
+            </p>
+        </section>
+
+        <section id="skills">
+            <h2>Technical Stack</h2>
+            <div class="skills-grid">
+                <div class="skill-tag">Python</div>
+                <div class="skill-tag">Java</div>
+                <div class="skill-tag">C</div>
+                <div class="skill-tag">HTML & CSS</div>
+                <div class="skill-tag">JavaScript</div>
+                <div class="skill-tag">SQL</div>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <div class="education-card">
+                <h3 class="college-name">Nehru College of Engineering and Research Centre</h3>
+                <p style="margin: 5px 0;">Pampady, Kerala</p>
+                <p style="color: var(--text-muted);">B.Tech in Computer Science Engineering</p>
+                <p><strong>Current Status:</strong> 2nd Year Student</p>
+            </div>
+        </section>
+
+        <section id="connect">
+            <h2>Let's Connect</h2>
+            <div class="connect-container">
+                <p>I'm always open to discussing new projects, creative ideas, or opportunities in the tech space.</p>
+                <div class="contact-links">
+                    <a href="mailto:anika.devadas11@gmail.com" class="contact-item">Email Me</a>
+                    <a href="https://www.linkedin.com/in/anika-devadas" target="_blank" class="contact-item">LinkedIn</a>
+                    <a href="https://github.com/Anikadevadas" target="_blank" class="contact-item">GitHub</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        &copy; 2025 Anika Devadas • Built with HTML & CSS
+    </footer>
+
+</body>
+</html>
